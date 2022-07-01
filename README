@@ -1,0 +1,43 @@
+Deep Fake Assignment
+
+##Razi Mahmood, UC Berkeley Data Science
+
+Overall Approach:
+
+The overall approach I used to work on this assignment.
+
+1. Tried to learn about the DeepFake problem by searching for relevant articles and tutorials.
+2. Found a good survey paper https://arxiv.org/abs/2001.00179 titled "DeepFakes and Beyond: A Survey of Face Manipulation and Fake Detection" by Tolosana et al. from 2020 that was relatively recent.
+3. From this paper I learned of the 4 different types of deep fake methods, namely: a. Using entirely synthetic face generation using GAN variants tested on 100K faces dataset among others. b. Using identity swapping methods tested on FaceForensics video datasets c. Using attribute manipulation methods tested on DFFD and other datasets d. Using expression swap methods tested on FF++ and other datasets
+4. Surveyed the datasets available and listed in this survey paper. Also looked at Kaggle DFDC challenge and other datasets contributed by researchers to Kaggle and sub-selected those that were of images (many of them were video datasets)
+
+
+The answers to each question are in their respective directories.
+Sample datasets are included in the data directory
+Two different methods were tried for building the real/fake CNN models, one on the whole image (Method 1) and the other focused on face region only (Method 2). The overall performance on the test set was similar as per accuracy, but it remains to be seen which one is better for the test dataset given. In any case, since this was done with 100 images, it is not a model for prime time.
+
+In the data directory, 
+original - the original data taken from the Face-HQ dataset
+sampled - the 100 sample subset selected through random sampling
+cropped - the images with face regions only selected from the sampled  used for Method 2
+sampledsplits - are the train-validate-test splits for the sampled dataset
+croppedsplits - are similar splits for the cropped dataset used for Method 2
+The dependencies are described in requirements.txt file
+
+The notebooks for each question are listed separately within the respective folder.
+
+Pre-built models are also included to try out in the models directory
+
+
+Installation Instructions
+
+1. download or checkout the project
+2. Run in a commandprompt :
+>conda env create -f env.yml
+>conda activate my_env
+3. Launch Jupyter notebook
+jupyter notebook --NotebookApp.iopub_data_rate_limit=1.0e10
+4. Run Question-1.ipynb
+5. Run Question-2.ipynb (no code)
+6. Run Question-3.ipynb
+7. Run Question-4.ipynb (no code)
