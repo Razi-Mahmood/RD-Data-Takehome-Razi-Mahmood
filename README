@@ -17,7 +17,7 @@ Sample datasets are included in the data directory
 Two different methods were tried for building the real/fake CNN models, one on the whole image (Method 1) and the other focused on face region only (Method 2). The overall performance on the test set was similar as per accuracy, but it remains to be seen which one is better for the test dataset given. In any case, since this was done with 100 images, it is not a model for prime time.
 
 In the data directory, 
-original - the original data taken from the Face-HQ dataset
+original - the original data taken from the Face-HQ dataset ***this directory has been removed when checking in the work on Github due to size constraints***
 sampled - the 100 sample subset selected through random sampling
 cropped - the images with face regions only selected from the sampled  used for Method 2
 sampledsplits - are the train-validate-test splits for the sampled dataset
