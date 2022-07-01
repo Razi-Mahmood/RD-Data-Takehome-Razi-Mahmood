@@ -1,6 +1,6 @@
 Deep Fake Assignment
 
-##Razi Mahmood, UC Berkeley Data Science
+#Razi Mahmood, UC Berkeley Data Science
 
 Overall Approach:
 
@@ -11,28 +11,47 @@ The overall approach I used to work on this assignment.
 3. From this paper I learned of the 4 different types of deep fake methods, namely: a. Using entirely synthetic face generation using GAN variants tested on 100K faces dataset among others. b. Using identity swapping methods tested on FaceForensics video datasets c. Using attribute manipulation methods tested on DFFD and other datasets d. Using expression swap methods tested on FF++ and other datasets
 4. Surveyed the datasets available and listed in this survey paper. Also looked at Kaggle DFDC challenge and other datasets contributed by researchers to Kaggle and sub-selected those that were of images (many of them were video datasets)
 
+Answers to questions:
 
-The answers to each question are in their respective directories.
-Sample datasets are included in the data directory
-Two different methods were tried for building the real/fake CNN models, one on the whole image (Method 1) and the other focused on face region only (Method 2). The overall performance on the test set was similar as per accuracy, but it remains to be seen which one is better for the test dataset given. In any case, since this was done with 100 images, it is not a model for prime time.
+The answers to each question are in their respective directories in notebooks. So Question-1 is Question-1.ipynb for example
+
+Sample data is included in the data directory under sampled.
+
+Two different methods were tried for building the real/fake CNN models, one on the whole image (Method 1) and the other focused on face region only (Method 2). The overall performance on the test set was similar as per accuracy, but it remains to be seen which one is better for the test dataset given. In any case, since this was done with 100 images, it is not a model for prime time. 
+
+Your supplied data is in the rd_test_dataset directory under data.
+The results of trained model is deposited in results/results.csv and resultscropped.csv for the two methods.
 
 In the data directory, 
-original - the original data taken from the Face-HQ dataset ****this directory has been removed when checking in the work on Github due to size constraints****
-sampled - the 100 sample subset selected through random sampling
+
+original - the original data taken from the Face-HQ dataset  https://drive.google.com/file/d/1rokPjCHe30mZBnk7J5j0MiIuUAuOqHoQ/view . Please download and put this in a suitable location and change the origdir pointer in Question-1.ipynb.
+The structure of the original directory will be as follows:
+original->fake->category1->foo1.jpg
+              ->category2->foo3.jpg
+                ....
+        ->real->category1->foo2.jpg
+                .....
+   
+
+
+sampled - the 100 sample subset selected through random sampling of the original data.
 cropped - the images with face regions only selected from the sampled  used for Method 2
 sampledsplits - are the train-validate-test splits for the sampled dataset
 croppedsplits - are similar splits for the cropped dataset used for Method 2
-The dependencies are described in requirements.txt file
 
-The notebooks for each question are listed separately within the respective folder.
 
-Pre-built models are also included to try out in the models directory
+The dependencies are described in env.yml file
+
+
+Pre-built models are removed from the model directory to save space. They can be built again by running the relevant cells in the Question-3.ipynb.
+
+
 
 
 Installation Instructions
 
 1. download or checkout the project
-2. Run in a commandprompt :
+2. Run in a command prompt :
 >conda env create -f env.yml
 >conda activate my_env
 3. Launch Jupyter notebook
