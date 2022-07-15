@@ -1,4 +1,4 @@
-Deep Fake Assignment
+DeepFake Assignment
 
 #Razi Mahmood, UC Berkeley Data Science
 
@@ -10,6 +10,7 @@ The overall approach I used to work on this assignment.
 2. Found a good survey paper https://arxiv.org/abs/2001.00179 titled "DeepFakes and Beyond: A Survey of Face Manipulation and Fake Detection" by Tolosana et al. from 2020 that was relatively recent.
 3. From this paper I learned of the 4 different types of deep fake methods, namely: a. Using entirely synthetic face generation using GAN variants tested on 100K faces dataset among others. b. Using identity swapping methods tested on FaceForensics video datasets c. Using attribute manipulation methods tested on DFFD and other datasets d. Using expression swap methods tested on FF++ and other datasets
 4. Surveyed the datasets available and listed in this survey paper. Also looked at Kaggle DFDC challenge and other datasets contributed by researchers to Kaggle and sub-selected those that were of images (many of them were video datasets)
+5. Some of the models I modified and experimented with came from this source: https://medium.com/analytics-vidhya/fake-face-image-classification-5a4151db9b8d.
 
 Answers to questions:
 
@@ -18,6 +19,8 @@ The answers to each question are in their respective directories in notebooks. S
 Sample data is included in the data directory under sampled.
 
 Two different methods were tried for building the real/fake CNN models, one on the whole image (Method 1) and the other focused on face region only (Method 2). The overall performance on the test set was similar as per accuracy, but it remains to be seen which one is better for the test dataset given. In any case, since this was done with 100 images, it is not a model for prime time. 
+
+For the CNN models, I mainly worked off of this approach: https://medium.com/analytics-vidhya/fake-face-image-classification-5a4151db9b8d
 
 Your supplied data is in the rd_test_dataset directory under data.
 The results of trained model is deposited in results/results.csv and resultscropped.csv for the two methods.
